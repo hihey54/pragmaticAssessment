@@ -33,4 +33,4 @@ conda activate pragAss
 conda install -n pragAss mlxtend=0.22.0 sklearn=1.2.2 numpy=1.24.3 pandas=1.5.3 ipaddress=1.0
 ```
 
-(it also works on ````pandas=2.0.2```, which can be installed via ```pip```)
+(it also works on ```pandas=2.0.2```, which can be installed via ```pip```)

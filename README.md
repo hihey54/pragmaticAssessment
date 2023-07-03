@@ -1,36 +1,28 @@
-Welcome to the code repository of our paper. 
 
-## Workflow
+Repository for the paper "SoK: Pragmatic Assessment of Machine Learning for Network Intrusion Detection", accepted to EuroSP'23.
 
-Replicating our experiments is relatively straightforward. At a high-level, it entails performing the following steps:
-
-1) Download the datasets from the source (by following the instructions provided in "data-acquisition.md" document)
-   * Solely for CTU13, remember to follow the "prelabeling" steps as well!
-2) Apply the preprocessing steps for each of the 5 datasets we considered (for which we provide the code notebooks in the preprocessing folder)
-   *  For convenience, we can provide _upon request_ the preprocessed data, as well as the original source data (in the unfortunate event that it is moved or taken down)
-3) After ensuring that the datasets match (compute the SHA256 and check it against the value provided in each subfolder of the "data" folder), you can proceed to run the notebooks in the "evaluation" folder.
-
-Have fun!
-
-## Requirements
-
-We developed our code between the end of 2021 and the beginning of 2022. We used the following Python libraries:
-
-* scikit-learn: version 0.23
-* pandas: version 1.0.5
-* numpy: version 1.18
-* mlxtend: 0.19.0
-* ipaddress: 1.0
-
-All running on Python 3.8. The code provided in this repository may slightly differ due to some necessary adaptations we applied to test our code on different systems. 
-
-
-Specifically, the code provided in this repository has been tested to be working on a venv which can be setup as follows (using anaconda):
+If you use any part of this codebase, you are kindly invited to cite our paper:
 
 ```
-conda create -n pragAss python=3.10.11 anaconda
-conda activate pragAss
-conda install -n pragAss mlxtend=0.22.0 sklearn=1.2.2 numpy=1.24.3 pandas=1.5.3 ipaddress=1.0
+@inproceedings{apruzzese2023pragmatic,
+  title={{SoK: Pragmatic Assessment of Machine Learning for Network Intrusion Detection}},
+  author={Apruzzese, Giovanni and Laskov, Pavel and Schneider, Johannes},
+  booktitle={8th IEEE European Symposium on Security and Privacy (EuroSP)},
+  year={2023},
+  organization={IEEE}
+}
 ```
 
-(it also works on ```pandas=2.0.2```, which can be installed via ```pip```)
+The full code will be released after the presentation of the paper at the main conference.
+
+# Description
+
+This repository is organized as follows:
+
+* _pragmatic_assessment_: this is the folder containing the source-code of our experiments (data-acquisition, preprocessing, evaluation);
+* _user_study_: this folder contains some additional data pertaining to our user_study;
+* _camera_ready.pdf_: this document corresponds to the final version of our paper, which will appear in the proceedings of the conference;
+* _supplementary.pdf_: this document is an "extension" of our paper, providing additional experimental details and the full results of our pragmatic assessment (it was omitted from the camera ready due to page constraints);
+* _full_paper.pdf_: this document combines the two previous ones, and was the version of the paper "accepted" during the peer-review process of IEEE EuroSP'23.
+
+For any questions or inquiries, contact: giovanni.apruzzese@uni.li
