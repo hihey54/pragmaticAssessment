@@ -34,3 +34,9 @@ conda install -n pragAss mlxtend=0.22.0 sklearn=1.2.2 numpy=1.24.3 pandas=1.5.3 
 ```
 
 (it also works on ```pandas=2.0.2```, which can be installed via ```pip```)
+
+## DEMO
+
+The notebook "demo.ipynb" contains the code used for the live demonstration given during the presentation of the paper. It was done on an Intel i9-12900H (64GB of RAM), and the dataset was GTCS. 
+
+Interestingly, during the presentation, the training time for HGB and RF was higher than during my previous tests: this is because connecting the laptop to the HDMI cable made it so that half of the CPU was used for graphics, thereby decreasing the amount of cores available to run HGB and RF. 
